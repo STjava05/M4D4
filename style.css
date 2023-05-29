@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: rgb(39, 37, 37);
+    height: 60px;
+    gap: 5px;
+}
+.album{
+   color: white;
+   font-weight: bold;
+   font-size: 1.5rem;
+   margin-right: 900px;
+  
+}
+.camera{
+    color: seashell;
+    margin-left: 300px;
+    margin-bottom: 10px;
+}
+.deeze{
+    color: seashell;
+    margin-right: 100px;
+    border: 1px solid seashell;
+}
+#inputSearch{
+    margin-top: 3rem;
+    /* padding: 15px; */
+   
+    
+}
+
+
+.show{
+    border: 2px solid rgb(255, 0, 166);
+}
+.ricerca{
+   
+    padding: 4px;
+    border-radius: 10px;
+    
+}
+ #searchButton{
+  height: 100%;
+  /* padding: 8px; */
+ }
+ #modale{
+    height: 100vh;
+    z-index: 99;
+    overflow-y: scroll;
+}
+.orizCard{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
