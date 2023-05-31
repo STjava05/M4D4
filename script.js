@@ -28,6 +28,7 @@ function livres(liste) {
 
     bookmarks.innerHTML = "";
     for (const bookmark of liste) {
+
         let card = document.createElement("div");
         card.classList.add("card");
         card.classList.add("col-3");
@@ -43,18 +44,39 @@ function livres(liste) {
         price.classList.add("card-text");
         price.innerText = bookmark.price;
         let btn = document.createElement("button");
+        let button = document.createElement("button");
+        let details = document.createElement("a");
 
         btn.classList.add("btn", "addCartBtn");
         btn.classList.add("btn-primary");
         btn.innerText = "Add to cart";
+        button.classList.add("btn", "saltaBtn");
+        button.classList.add("btn", "btn-success");
+        button.innerText = "salta";
+        details.classList.add("btn", "detailsBtn", "ms-2");
+
+        details.classList.add("btn", "btn-warning");
+        details.innerText = "details";
+        details.href="/dettagli.html" + "?id=" + bookmark.asin;
+        details.target = "_blank";
+
+
+        
+        
+
         cardBody.appendChild(title);
         cardBody.appendChild(price);
         cardBody.appendChild(btn);
+        cardBody.appendChild(button);
+        cardBody.appendChild(details);
+
         card.appendChild(img);
         card.appendChild(cardBody);
         bookmarks.appendChild(card);
 
+
     }
+
     // Viene aggiunto un listener per l'evento keyup, il quale viene attivato quando viene rilasciato un tasto dopo aver inserito del testo nell'input.
     // All'interno della funzione di callback per l'evento keyup, viene ottenuto il valore dell'input di ricerca utilizzando inputSearch.value.trim(). 
     // Viene quindi controllato se la lunghezza del valore è maggiore o uguale a 3 caratteri.
@@ -84,25 +106,26 @@ function livres(liste) {
         livres(filteredBooks);
     });
     shopping();
-
+     saltaBtn();
 }
 // La funzione shopping viene chiamata per gestire la logica del carrello
 function shopping() {
     let cards_ = document.getElementsByClassName("card");
     let addBtn = document.getElementsByClassName("addCartBtn");
+
     // Viene eseguito un ciclo for per iterare su tutti i pulsanti "Add to cart". All'interno del ciclo, viene aggiunto un listener per l'evento 
     // di click a ciascun pulsante. Quando viene cliccato un pulsante, viene eseguita la funzione di callback.
     for (let i = 0; i < addBtn.length; i++) {
         let z = i;
         addBtn[i].addEventListener("click", function () {
             cards_[z].classList.toggle("show");
-          shopping_list.push(cards_[z]);
+            shopping_list.push(cards_[z]);
             console.log(shopping_list);
-            
+
             // Viene creato un pulsante "Remove" per rimuovere l'elemento dal carrello. Viene aggiunto un listener
             // per l'evento di click al pulsante "Remove" per rimuovere l'elemento corrispondente dal carrello e dalla modale. 
             // L'elemento card viene quindi aggiunto al contenitore della modale (modaleRow). Infine, viene chiamata la funzione livres per aggiornare la visualizzazione dei libri.
-           // Viene restituito l'array `
+            // Viene restituito l'array `
             let removeBtn = document.createElement("button");
             removeBtn.addEventListener("click", (event) => {
 
@@ -120,8 +143,23 @@ function shopping() {
 
     }
     return shopping_list;
-}
 
+}
+function saltaBtn() {
+    let saltaCard = document.getElementsByClassName("saltaBtn");
+    let card_2 = document.getElementsByClassName("card");
+    
+    for (let i = 0; i < saltaCard.length; i++) {
+        // let z = i;
+        saltaCard[i].addEventListener("click", function () {
+
+
+            card_2[i].classList.toggle("d-none");
+ })
+
+    }
+    console.log(saltaCard);
+}
 console.log(shopping_list);
 
 function appendBooks(bookList) {

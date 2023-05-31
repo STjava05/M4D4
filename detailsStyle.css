@@ -1,0 +1,23 @@
+
+.removeVisibility{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+}
+
+.social-icons li a {
+    color: #555;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .social-icons li a:hover {
+    color: #333;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
