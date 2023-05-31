@@ -1,5 +1,4 @@
-
-.removeVisibility{
+.removeVisibility {
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -12,12 +11,56 @@
     font-size: 24px;
     margin-right: 10px;
     transition: color 0.3s ease-in-out;
-  }
+}
 
-  .social-icons li a:hover {
+.social-icons li a:hover {
     color: #333;
-  }
+}
 
-  footer p {
+footer p {
     margin-bottom: 0;
-  }
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: rgb(99, 72, 72);
+    height: 60px;
+    gap: 5px;
+}
+
+.album {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 900px;
+
+}
+
+.camera {
+    color: seashell;
+    margin-left: 300px;
+    margin-bottom: 10px;
+}
+
+.deeze {
+    color: seashell;
+    margin-right: 100px;
+    border: 1px solid seashell;
+}
+
+#detaille {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.detail {
+    text-decoration: none;
+    color: white;
+    padding-left: 40px;
+}

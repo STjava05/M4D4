@@ -1,12 +1,12 @@
-if(window.location.search ) {
+if (window.location.search) {
     let urlParams = new URLSearchParams(window.location.search);
     let id = urlParams.get("id");
     fetch("https://striveschool-api.herokuapp.com/books/" + id)
-    .then(response => response.json())
-    .then(book => {
-      details(book);  
+        .then(response => response.json())
+        .then(book => {
+            details(book);
 
-    })
+        })
 }
 
 function details(book) {
@@ -25,13 +25,13 @@ function details(book) {
     let price = document.createElement("p");
     price.classList.add("card-text");
     price.innerText = book.price;
-    
+
 
     cardBody.appendChild(title);
     cardBody.appendChild(price);
     card.appendChild(img);
     card.appendChild(cardBody);
-     detaille.appendChild(card);
-    
+    detaille.appendChild(card);
+
 }
 

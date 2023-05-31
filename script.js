@@ -57,12 +57,12 @@ function livres(liste) {
 
         details.classList.add("btn", "btn-warning");
         details.innerText = "details";
-        details.href="/dettagli.html" + "?id=" + bookmark.asin;
+        details.href = "/dettagli.html" + "?id=" + bookmark.asin;
         details.target = "_blank";
 
 
-        
-        
+
+
 
         cardBody.appendChild(title);
         cardBody.appendChild(price);
@@ -106,7 +106,7 @@ function livres(liste) {
         livres(filteredBooks);
     });
     shopping();
-     saltaBtn();
+    saltaBtn();
 }
 // La funzione shopping viene chiamata per gestire la logica del carrello
 function shopping() {
@@ -148,14 +148,14 @@ function shopping() {
 function saltaBtn() {
     let saltaCard = document.getElementsByClassName("saltaBtn");
     let card_2 = document.getElementsByClassName("card");
-    
+
     for (let i = 0; i < saltaCard.length; i++) {
         // let z = i;
         saltaCard[i].addEventListener("click", function () {
 
 
             card_2[i].classList.toggle("d-none");
- })
+        })
 
     }
     console.log(saltaCard);

@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.navBar{
+.navBar {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -14,62 +14,73 @@
     height: 60px;
     gap: 5px;
 }
-.album{
-   color: white;
-   font-weight: bold;
-   font-size: 1.5rem;
-   margin-right: 900px;
-  
+
+.album {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 900px;
+
 }
-.camera{
+
+.camera {
     color: seashell;
     margin-left: 300px;
     margin-bottom: 10px;
 }
-.deeze{
+
+.deeze {
     color: seashell;
     margin-right: 100px;
     border: 1px solid seashell;
 }
-#inputSearch{
+
+#inputSearch {
     margin-top: 3rem;
     /* padding: 15px; */
-   
-    
+
+
 }
 
 
-.show{
+.show {
     border: 2px solid rgb(255, 0, 166);
 }
-.ricerca{
-   
+
+.ricerca {
+
     padding: 4px;
     border-radius: 10px;
-    
+
 }
- #searchButton{
-  height: 100%;
-  /* padding: 8px; */
- }
- #modale{
+
+#searchButton {
+    height: 100%;
+    /* padding: 8px; */
+}
+
+#modale {
     height: 100vh;
     z-index: 99;
     overflow-y: scroll;
 }
-.orizCard{
+
+.orizCard {
     width: 100%;
     background-color: rgb(255, 255, 255);
 }
-.detail{
+
+.detail {
     text-decoration: none;
     color: white;
     padding-left: 20px;
 }
-.btn-success{
+
+.btn-success {
     margin-left: 10px;
 }
-.removeVisibility{
+
+.removeVisibility {
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -82,12 +93,12 @@
     font-size: 24px;
     margin-right: 10px;
     transition: color 0.3s ease-in-out;
-  }
+}
 
-  .social-icons li a:hover {
+.social-icons li a:hover {
     color: #333;
-  }
+}
 
-  footer p {
+footer p {
     margin-bottom: 0;
-  }
+}
